@@ -101,10 +101,17 @@ decimal.addEventListener("click", function () {
 });
 
 equals.addEventListener("click", function () {
-  console.log(value1, operator, value2);
   let first = parseFloat(value1.join(""));
-  let second = parseFloat(value2.join(""));
+  let second;
   let tempanswer;
+
+  if (value2.length === 0) {
+    second = 0;
+    operator[0] = "+";
+  } else {
+    second = parseFloat(value2.join(""));
+  }
+
   if (operator[0] === "+") {
     tempanswer = parseFloat(first + second);
   } else if (operator[0] === "-") {
