@@ -26,7 +26,7 @@ function updateScreen() {
 btns.forEach((item) => {
   item.addEventListener("click", (element) => {
     let value = item.id;
-    if (screenValue.length < 16) {
+    if (screenValue.length < 20) {
       screenValue.push(value);
     } else {
     }
