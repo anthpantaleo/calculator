@@ -1,7 +1,7 @@
 :root {
   --background: #979abb;
   --dark: #2b2d42;
-  --function: #fca311;
+  --function: #f48c06;
   --highlight: #14213d;
   --number: #b9bbd2;
 }
@@ -25,12 +25,12 @@ body {
   height: 500px;
   width: 360px;
   border: 2px var(--dark) solid;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   margin: 10px;
   display: flex;
   background-color: var(--background);
-  font-weight: bold;
+  font-weight: bolder;
   color: var(--dark);
 }
 
@@ -50,6 +50,7 @@ body {
 
 .griditem {
   background-color: var(--function);
+  color: white;
 }
 
 .griditem:hover {
@@ -65,12 +66,14 @@ body {
   grid-column-start: 1;
   grid-column-end: 5;
   background-color: var(--number);
+  color: black;
 }
 
 .screeninfo {
   margin-left: auto;
   margin-right: 10px;
   font-size: 28px;
+  word-wrap: break-word;
 }
 
 .screen:hover {
