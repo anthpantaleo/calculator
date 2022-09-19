@@ -17,17 +17,33 @@ let operator = [];
 let flipper = false;
 
 function updateScreen() {
-  if (flipper == true) {
-    if (value2.length == 0) {
-      screen.innerText = 0;
-    } else {
-      screen.innerText = value2.join("");
+  if (operator.length == 0) {
+    if (flipper == true) {
+      if (value2.length == 0) {
+        screen.innerText = 0;
+      } else {
+        screen.innerText = value2.join("");
+      }
+    } else if (flipper == false) {
+      if (value1.length == 0) {
+        screen.innerText = 0;
+      } else {
+        screen.innerText = value1.join("");
+      }
     }
-  } else if (flipper == false) {
-    if (value1.length == 0) {
-      screen.innerText = 0;
-    } else {
-      screen.innerText = value1.join("");
+  } else {
+    if (flipper == true) {
+      if (value2.length == 0) {
+        screen.innerText = 0;
+      } else {
+        screen.innerText = value2.join("");
+      }
+    } else if (flipper == false) {
+      if (value1.length == 0) {
+        screen.innerText = 0;
+      } else {
+        screen.innerText = value1.join("") + operator[0];
+      }
     }
   }
 }
@@ -58,6 +74,7 @@ operators.forEach((item) => {
     } else {
       operator.push(op);
     }
+    updateScreen();
     flipper = true;
   });
 });
